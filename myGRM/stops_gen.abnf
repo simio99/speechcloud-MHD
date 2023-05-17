@@ -1,0 +1,325 @@
+#ABNF 1.0 UTF-8 cs; 
+ 
+root $stops; 
+ 
+public $stops = ( 
+    (Adelova | adelova) {Adelova} | 
+    (Amfiteátr | amfiteátr) {Amfiteátr} | 
+    (Anglické nábřeží | anglické nábřeží | u zvonu | u bohemky) {Anglické nábřeží} | 
+    (Barvínková | barvínková) {Barvínková} | 
+    (Bazén Slovany | bazén slovany) {Bazén Slovany} | 
+    (Belánka | belánka) {Belánka} | 
+    (Bolevec | bolevec) {Bolevec} | 
+    (Bolevecká náves | bolevecká náves) {Bolevecká náves} | 
+    (Bolevecký rybník | bolevecký rybník | bolevák) {Bolevecký rybník} | 
+    (Borská pole | borská pole) {Borská pole} | 
+    (Borský park | borský park) {Borský park} | 
+    (Bory | bory) {Bory} | 
+    (Boženy Němcové | boženy němcové) {Boženy Němcové} | 
+    (Božkov | božkov) {Božkov} | 
+    (Brněnská | brněnská) {Brněnská} | 
+    (Brojova | brojova) {Brojova} | 
+    (Bručná | bručná) {Bručná} | 
+    (Bukovec | bukovec) {Bukovec} | 
+    (Bušovice | bušovice) {Bušovice} | 
+    (Bušovice, Sedlecko | bušovice, sedlecko) {Bušovice, Sedlecko} | 
+    (Bílá Hora | bílá hora) {Bílá Hora} | 
+    (CAN Husova | can husova | centrální autobusové nádraží husova) {CAN Husova} | 
+    (CAN Skvrňanská | can skvrňanská) {CAN Skvrňanská} | 
+    (CAN Tylova | can tylova) {CAN Tylova} | 
+    (Chaty | chaty) {Chaty} | 
+    (Chebská | chebská) {Chebská} | 
+    (Chlumek | chlumek) {Chlumek} | 
+    (Chodské náměstí | chodské náměstí) {Chodské náměstí} | 
+    (Chotěšov, u kláštera | chotěšov, u kláštera) {Chotěšov, u kláštera} | 
+    (Chotěšov, žel. st. | chotěšov, žel. st.) {Chotěšov, žel. st.} | 
+    (Chrást, Lidový dům | chrást, lidový dům) {Chrást, Lidový dům} | 
+    (Chrást, ZŠ | chrást, zš) {Chrást, ZŠ} | 
+    (Chválenická | chválenická) {Chválenická} | 
+    (Cínová | cínová) {Cínová} | 
+    (Daiho | daiho) {Daiho} | 
+    (Divadlo Alfa | divadlo alfa) {Divadlo Alfa} | 
+    (Divadlo J. K. Tyla | divadlo j. k. tyla) {Divadlo J. K. Tyla} | 
+    (Dobrovského | dobrovského) {Dobrovského} | 
+    (Dolní Vlkýš | dolní vlkýš) {Dolní Vlkýš} | 
+    (Domažlická rondel | domažlická rondel) {Domažlická rondel} | 
+    (Doubravka | doubravka) {Doubravka} | 
+    (Doudlevce ETZ | doudlevce etz) {Doudlevce ETZ} | 
+    (Dvořákova | dvořákova) {Dvořákova} | 
+    (Dýšina, Armaturka | dýšina, armaturka) {Dýšina, Armaturka} | 
+    (Dýšina, náves | dýšina, náves) {Dýšina, náves} | 
+    (Ejpovická | ejpovická) {Ejpovická} | 
+    (Fialková | fialková) {Fialková} | 
+    (Folmavská rondel | folmavská rondel) {Folmavská rondel} | 
+    (Gambrinus | gambrinus) {Gambrinus} | 
+    (Generála Lišky | generála lišky) {Generála Lišky} | 
+    (Gigant | gigant) {Gigant} | 
+    (Goethova | goethova) {Goethova} | 
+    (Goldscheiderova | goldscheiderova) {Goldscheiderova} | 
+    (Habrmannovo nám. | habrmannovo nám.) {Habrmannovo nám.} | 
+    (Hasičská stanice | hasičská stanice) {Hasičská stanice} | 
+    (Hlavní nádraží | hlavní nádraží) {Hlavní nádraží} | 
+    (Hlavní pošta | hlavní pošta) {Hlavní pošta} | 
+    (Hodonínská | hodonínská) {Hodonínská} | 
+    (Hokejová hala | hokejová hala) {Hokejová hala} | 
+    (Hradiště | hradiště) {Hradiště} | 
+    (Husův park | husův park) {Husův park} | 
+    (Hřbitov Zátiší | hřbitov zátiší) {Hřbitov Zátiší} | 
+    (Hřbitovní | hřbitovní) {Hřbitovní} | 
+    (Jasmínová | jasmínová) {Jasmínová} | 
+    (Jatky | jatky) {Jatky} | 
+    (Jedlová | jedlová) {Jedlová} | 
+    (Jižní Předměstí | jižní předměstí) {Jižní Předměstí} | 
+    (K Bukové | k bukové) {K Bukové} | 
+    (K Dráze | k dráze) {K Dráze} | 
+    (K Losiné | k losiné) {K Losiné} | 
+    (K Nemocnici | k nemocnici) {K Nemocnici} | 
+    (K Plzenci | k plzenci) {K Plzenci} | 
+    (K Prokopávce | k prokopávce) {K Prokopávce} | 
+    (K Radyni | k radyni) {K Radyni} | 
+    (K Rozvodně | k rozvodně) {K Rozvodně} | 
+    (K Řečišti | k řečišti) {K Řečišti} | 
+    (Kalendářní | kalendářní) {Kalendářní} | 
+    (Kalikova | kalikova) {Kalikova} | 
+    (Karla Steinera | karla steinera) {Karla Steinera} | 
+    (Karlov | karlov) {Karlov} | 
+    (Ke Karlovu | ke karlovu) {Ke Karlovu} | 
+    (Ke Kovářce | ke kovářce) {Ke Kovářce} | 
+    (Ke Kukačce | ke kukačce) {Ke Kukačce} | 
+    (Ke Špitálskému lesu | ke špitálskému lesu) {Ke Špitálskému lesu} | 
+    (Komenského | komenského) {Komenského} | 
+    (Konvalinková | konvalinková) {Konvalinková} | 
+    (Koterov | koterov) {Koterov} | 
+    (Kovošrot | kovošrot) {Kovošrot} | 
+    (Kozolupy, I | kozolupy, i) {Kozolupy, I} | 
+    (Kozolupy, u Jána | kozolupy, u jána) {Kozolupy, u Jána} | 
+    (Košutka | košutka) {Košutka} | 
+    (Krašovská | krašovská) {Krašovská} | 
+    (Kruhová | kruhová) {Kruhová} | 
+    (Kyšice | kyšice) {Kyšice} | 
+    (Křimice | křimice) {Křimice} | 
+    (Lašitov | lašitov) {Lašitov} | 
+    (Letkov | letkov) {Letkov} | 
+    (Letkov, U Studánky | letkov, u studánky) {Letkov, U Studánky} | 
+    (Letkov, V Podlesí | letkov, v podlesí) {Letkov, V Podlesí} | 
+    (Letkov, u zrcadla | letkov, u zrcadla) {Letkov, u zrcadla} | 
+    (Letná | letná) {Letná} | 
+    (Lhota | lhota) {Lhota} | 
+    (Liliová | liliová) {Liliová} | 
+    (Litice | litice) {Litice} | 
+    (Lobzy | lobzy) {Lobzy} | 
+    (Lochotínský pavilón | lochotínský pavilón) {Lochotínský pavilón} | 
+    (Luftova zahrada | luftova zahrada) {Luftova zahrada} | 
+    (Lábkova | lábkova) {Lábkova} | 
+    (Lékařská fakulta | lékařská fakulta) {Lékařská fakulta} | 
+    (Líně | líně) {Líně} | 
+    (Líně, Sulkov | líně, sulkov) {Líně, Sulkov} | 
+    (Macháčkova | macháčkova) {Macháčkova} | 
+    (Majakovského | majakovského) {Majakovského} | 
+    (Malesice | malesice) {Malesice} | 
+    (Malesická | malesická) {Malesická} | 
+    (Malická | malická) {Malická} | 
+    (Malý Bolevec | malý bolevec) {Malý Bolevec} | 
+    (Masarykovo náměstí | masarykovo náměstí) {Masarykovo náměstí} | 
+    (Mezi Ploty | mezi ploty) {Mezi Ploty} | 
+    (Mikulášská | mikulášská) {Mikulášská} | 
+    (Mikulášské náměstí | mikulášské náměstí) {Mikulášské náměstí} | 
+    (Mlýnské nábřeží | mlýnské nábřeží) {Mlýnské nábřeží} | 
+    (Morseova | morseova) {Morseova} | 
+    (Mozartova | mozartova) {Mozartova} | 
+    (Mrakodrap | mrakodrap) {Mrakodrap} | 
+    (Město Touškov | město touškov) {Město Touškov} | 
+    (NC Borská pole | nc borská pole) {NC Borská pole} | 
+    (NC Úněšovská | nc úněšovská) {NC Úněšovská} | 
+    (NC Černice | nc černice) {NC Černice} | 
+    (Na Dlouhých | na dlouhých) {Na Dlouhých} | 
+    (Na Rozcestí | na rozcestí) {Na Rozcestí} | 
+    (Na Rozhraní | na rozhraní) {Na Rozhraní} | 
+    (Na Rychtářce | na rychtářce | na Rychtářce) {Na Rychtářce} | 
+    (Na Spojce | na spojce) {Na Spojce} | 
+    (Nad Zátiším | nad zátiším) {Nad Zátiším} | 
+    (Nad Úhlavou | nad úhlavou) {Nad Úhlavou} | 
+    (Nemocnice Bory | nemocnice bory) {Nemocnice Bory} | 
+    (Nemocnice Lochotín | nemocnice lochotín) {Nemocnice Lochotín} | 
+    (Nemocnice Privamed | nemocnice privamed) {Nemocnice Privamed} | 
+    (Nová Hospoda | nová hospoda) {Nová Hospoda} | 
+    (Nová Ves | nová ves) {Nová Ves} | 
+    (Nová Ves, u lesa | nová ves, u lesa) {Nová Ves, u lesa} | 
+    (Nádraží Bílá Hora | nádraží bílá hora) {Nádraží Bílá Hora} | 
+    (Nádraží Skvrňany | nádraží skvrňany) {Nádraží Skvrňany} | 
+    (Nádraží Slovany | nádraží slovany) {Nádraží Slovany} | 
+    (Nádraží Valcha | nádraží valcha) {Nádraží Valcha} | 
+    (Nám. Generála Píky | nám. generála píky) {Nám. Generála Píky} | 
+    (Nám. Českých bratří | nám. českých bratří) {Nám. Českých bratří} | 
+    (Náměstí Karla Panušky | náměstí karla panušky) {Náměstí Karla Panušky} | 
+    (Náměstí Míru | náměstí míru) {Náměstí Míru} | 
+    (Náměstí Republiky | náměstí republiky) {Náměstí Republiky} | 
+    (Náves Lhota | náves lhota) {Náves Lhota} | 
+    (Náves Litice | náves litice) {Náves Litice} | 
+    (Náves Radčice | náves radčice) {Náves Radčice} | 
+    (Obchodní | obchodní) {Obchodní} | 
+    (Obchodní rondel | obchodní rondel) {Obchodní rondel} | 
+    (Okounová | okounová) {Okounová} | 
+    (Olšová | olšová) {Olšová} | 
+    (Opavská | opavská) {Opavská} | 
+    (Orlík | orlík) {Orlík} | 
+    (Otýlie Beníškové | otýlie beníškové) {Otýlie Beníškové} | 
+    (Palackého náměstí | palackého náměstí) {Palackého náměstí} | 
+    (Pampelišková | pampelišková) {Pampelišková} | 
+    (Panasonic | panasonic) {Panasonic} | 
+    (Panelárna | panelárna) {Panelárna} | 
+    (Papírna Bukovec | papírna bukovec) {Papírna Bukovec} | 
+    (Pařížská | pařížská) {Pařížská} | 
+    (Pekárna | pekárna) {Pekárna} | 
+    (Petrohrad | petrohrad) {Petrohrad} | 
+    (Petřínská | petřínská) {Petřínská} | 
+    (Pietas | pietas) {Pietas} | 
+    (Plochá dráha | plochá dráha) {Plochá dráha} | 
+    (Plzeňka | plzeňka) {Plzeňka} | 
+    (Pod Dubovkou | pod dubovkou) {Pod Dubovkou} | 
+    (Pod Kyjovem | pod kyjovem) {Pod Kyjovem} | 
+    (Pod Záhorskem | pod záhorskem) {Pod Záhorskem} | 
+    (Pod Zámečkem | pod zámečkem) {Pod Zámečkem} | 
+    (Podhájí | podhájí) {Podhájí} | 
+    (Poliklinika Bory | poliklinika bory) {Poliklinika Bory} | 
+    (Poliklinika Doubravka | poliklinika doubravka) {Poliklinika Doubravka} | 
+    (Poliklinika Slovany | poliklinika slovany) {Poliklinika Slovany} | 
+    (Pošta Francouzská | pošta francouzská) {Pošta Francouzská} | 
+    (Pošta logistika | pošta logistika) {Pošta logistika} | 
+    (Prazdroj | prazdroj) {Prazdroj} | 
+    (Prokopova | prokopova) {Prokopova} | 
+    (Průmyslová | průmyslová) {Průmyslová} | 
+    (Přední Skvrňany | přední skvrňany) {Přední Skvrňany} | 
+    (Přeučilova | přeučilova) {Přeučilova} | 
+    (Radnice Slovany | radnice slovany) {Radnice Slovany} | 
+    (Radobyčice | radobyčice) {Radobyčice} | 
+    (Radobyčická | radobyčická) {Radobyčická} | 
+    (Radobyčická náves | radobyčická náves) {Radobyčická náves} | 
+    (Radčice | radčice) {Radčice} | 
+    (Rolnické náměstí | rolnické náměstí) {Rolnické náměstí} | 
+    (Rondel | rondel) {Rondel} | 
+    (Rozcestí Podhájí | rozcestí podhájí) {Rozcestí Podhájí} | 
+    (Rozcestí Újezd | rozcestí újezd) {Rozcestí Újezd} | 
+    (Révová | révová) {Révová} | 
+    (Sady Pětatřicátníků | sady pětatřicátníků) {Sady Pětatřicátníků} | 
+    (Samaritská | samaritská) {Samaritská} | 
+    (Severka | severka) {Severka} | 
+    (Severní | severní) {Severní} | 
+    (Skautská | skautská) {Skautská} | 
+    (Skvrňany | skvrňany) {Skvrňany} | 
+    (Sladová | sladová) {Sladová} | 
+    (Slovanské údolí | slovanské údolí) {Slovanské údolí} | 
+    (Slovany | slovany) {Slovany} | 
+    (Slupská | slupská) {Slupská} | 
+    (Sokolovská | sokolovská) {Sokolovská} | 
+    (Sokolská | sokolská) {Sokolská} | 
+    (Stadion Lokomotivy | stadion lokomotivy) {Stadion Lokomotivy} | 
+    (Staré letiště | staré letiště) {Staré letiště} | 
+    (Starý Plzenec | starý plzenec) {Starý Plzenec} | 
+    (Starý Plzenec, Bezručova | starý plzenec, bezručova) {Starý Plzenec, Bezručova} | 
+    (Starý Plzenec, Malá Strana | starý plzenec, malá strana) {Starý Plzenec, Malá Strana} | 
+    (Starý Plzenec, Nad tratí | starý plzenec, nad tratí) {Starý Plzenec, Nad tratí} | 
+    (Starý Plzenec, Sedlec | starý plzenec, sedlec) {Starý Plzenec, Sedlec} | 
+    (Starý Plzenec, Sedlec, Školní | starý plzenec, sedlec, školní) {Starý Plzenec, Sedlec, Školní} | 
+    (Starý Plzenec, U Mlýna | starý plzenec, u mlýna) {Starý Plzenec, U Mlýna} | 
+    (Starý Plzenec, Vilová čtvrť | starý plzenec, vilová čtvrť) {Starý Plzenec, Vilová čtvrť} | 
+    (Starý Plzenec, nádraží | starý plzenec, nádraží) {Starý Plzenec, nádraží} | 
+    (Starý Plzenec, náměstí | starý plzenec, náměstí) {Starý Plzenec, náměstí} | 
+    (Starý Plzenec, u školy | starý plzenec, u školy) {Starý Plzenec, u školy} | 
+    (Starý Plzenec, zdrav. stř. | starý plzenec, zdrav. stř.) {Starý Plzenec, zdrav. stř.} | 
+    (Stavební stroje | stavební stroje) {Stavební stroje} | 
+    (Stod | stod) {Stod} | 
+    (Sulislavská | sulislavská) {Sulislavská} | 
+    (Svatojirská | svatojirská) {Svatojirská} | 
+    (Světovar | světovar) {Světovar} | 
+    (Sídliště Bory | sídliště bory) {Sídliště Bory} | 
+    (Sídliště Košutka | sídliště košutka) {Sídliště Košutka} | 
+    (Techmania | techmania) {Techmania} | 
+    (Technická | technická) {Technická} | 
+    (Teplárna | teplárna) {Teplárna} | 
+    (Terezie Brzkové | terezie brzkové) {Terezie Brzkové} | 
+    (Tleskačova | tleskačova) {Tleskačova} | 
+    (Tylova | tylova) {Tylova} | 
+    (Tyršův most | tyršův most) {Tyršův most} | 
+    (Tyršův sad | tyršův sad) {Tyršův sad} | 
+    (Těšínská | těšínská) {Těšínská} | 
+    (Třemošná, Orlík | třemošná, orlík) {Třemošná, Orlík} | 
+    (Třemošná, sídliště | třemošná, sídliště) {Třemošná, sídliště} | 
+    (Třemošná, u pošty | třemošná, u pošty) {Třemošná, u pošty} | 
+    (Třemošná, ves | třemošná, ves) {Třemošná, ves} | 
+    (U Apolla | u apolla) {U Apolla} | 
+    (U Astry | u astry) {U Astry} | 
+    (U Bouzků | u bouzků) {U Bouzků} | 
+    (U Darebáka | u darebáka) {U Darebáka} | 
+    (U Družby | u družby) {U Družby} | 
+    (U Dráhy | u dráhy) {U Dráhy} | 
+    (U Duhy | u duhy) {U Duhy} | 
+    (U Gery | u gery) {U Gery} | 
+    (U Hřbitova | u hřbitova) {U Hřbitova} | 
+    (U Ježíška | u ježíška) {U Ježíška} | 
+    (U Kasáren | u kasáren) {U Kasáren} | 
+    (U Kondrů | u kondrů) {U Kondrů} | 
+    (U Letiště | u letiště) {U Letiště} | 
+    (U Luny | u luny) {U Luny} | 
+    (U Nové Hospody | u nové hospody) {U Nové Hospody} | 
+    (U Panasoniku | u panasoniku) {U Panasoniku} | 
+    (U Pietasu | u pietasu) {U Pietasu} | 
+    (U Plynárny | u plynárny) {U Plynárny} | 
+    (U Prodejny | u prodejny) {U Prodejny} | 
+    (U Práce | u práce) {U Práce} | 
+    (U Přehrady | u přehrady) {U Přehrady} | 
+    (U Radbuzy | u radbuzy) {U Radbuzy} | 
+    (U Staré Kovárny | u staré kovárny) {U Staré Kovárny} | 
+    (U Světovaru | u světovaru) {U Světovaru} | 
+    (U Teplárny | u teplárny) {U Teplárny} | 
+    (U Václava | u václava) {U Václava} | 
+    (U Školky | u školky) {U Školky} | 
+    (Univerzita | univerzita) {Univerzita} | 
+    (V Ráji | v ráji) {V Ráji} | 
+    (V Zahradách | v zahradách) {V Zahradách} | 
+    (Valcha | valcha) {Valcha} | 
+    (Vejprnice, Náves | vejprnice, náves) {Vejprnice, Náves} | 
+    (Vejprnice, Pod farou | vejprnice, pod farou) {Vejprnice, Pod farou} | 
+    (Vejprnice, bytovky | vejprnice, bytovky) {Vejprnice, bytovky} | 
+    (Vinice | vinice) {Vinice} | 
+    (Višňovka | višňovka) {Višňovka} | 
+    (Vltava | vltava) {Vltava} | 
+    (Vochov | vochov) {Vochov} | 
+    (Vochov, rozc. | vochov, rozc.) {Vochov, rozc.} | 
+    (Vodárna | vodárna) {Vodárna} | 
+    (Vozovna Slovany | vozovna slovany) {Vozovna Slovany} | 
+    (Věznice Bory | věznice bory) {Věznice Bory} | 
+    (Vřesová | vřesová) {Vřesová} | 
+    (Waltrova | waltrova) {Waltrova} | 
+    (Zadní Roudná | zadní roudná) {Zadní Roudná} | 
+    (Zadní Skvrňany | zadní skvrňany) {Zadní Skvrňany} | 
+    (Zbůch | zbůch) {Zbůch} | 
+    (Zbůch, Starý důl rozc. | zbůch, starý důl rozc.) {Zbůch, Starý důl rozc.} | 
+    (Zelenohorská | zelenohorská) {Zelenohorská} | 
+    (Zimní stadion | zimní stadion) {Zimní stadion} | 
+    (Zoologická zahrada | zoologická zahrada) {Zoologická zahrada} | 
+    (Zruč - Senec | zruč - senec) {Zruč - Senec} | 
+    (Zruč - Senec, U pomníku | zruč - senec, u pomníku) {Zruč - Senec, U pomníku} | 
+    (Zruč - Senec, V koutě | zruč - senec, v koutě) {Zruč - Senec, V koutě} | 
+    (Zruč - Senec, rozc. | zruč - senec, rozc.) {Zruč - Senec, rozc.} | 
+    (Zruč - Senec, u Drudíků | zruč - senec, u drudíků) {Zruč - Senec, u Drudíků} | 
+    (Zámecké náměstí | zámecké náměstí) {Zámecké náměstí} | 
+    (Západočeská univerzita | západočeská univerzita) {Západočeská univerzita} | 
+    (Zátiší | zátiší) {Zátiší} | 
+    (Ústřední hřbitov | ústřední hřbitov) {Ústřední hřbitov} | 
+    (Úřad Lochotín | úřad lochotín) {Úřad Lochotín} | 
+    (Čechurov | čechurov) {Čechurov} | 
+    (Čermákova | čermákova) {Čermákova} | 
+    (Černice | černice) {Černice} | 
+    (Červený Hrádek | červený hrádek) {Červený Hrádek} | 
+    (Čisticí stanice | čisticí stanice) {Čisticí stanice} | 
+    (Říjnová | říjnová) {Říjnová} | 
+    (Šimerova | šimerova) {Šimerova} | 
+    (Škoda III. brána | škoda iii. brána) {Škoda III. brána} | 
+    (Škoda VIII. brána | škoda viii. brána) {Škoda VIII. brána} | 
+    (Školy Vejprnická | školy vejprnická) {Školy Vejprnická} | 
+    (Špačková | špačková) {Špačková} | 
+    (Švihovská | švihovská) {Švihovská} | 
+    (Železniční poliklinika | železniční poliklinika) {Železniční poliklinika} | 
+    (Žlutická | žlutická) {Žlutická}
+);

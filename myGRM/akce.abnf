@@ -1,0 +1,10 @@
+#ABNF 1.0 UTF-8 cs;
+
+root $akce;
+
+public $akce = (
+    (co | umíš | zeptat | pomoc | nápověda | nevím | chci (pomoct|pomoci) | do prdele | co mám povídat | já nevím ) {help} |
+    (jak | dostat | dostanu | spojení | do | na) {spojeni} |
+    (kdy | v kolik | jede | odjíždí | odjezd) {odjezd} |
+    (to je vše | to_je všechno | už nic nechci | konec | už nic nepotřebuji | naschle | naschledanou | děkuji) {end}
+    );

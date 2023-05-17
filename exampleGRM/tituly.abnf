@@ -1,0 +1,55 @@
+#ABNF 1.0 utf-8;
+root $tituly;
+// xxx
+public $tituly = (
+ ( (ph.d.) | (pí_ejčdý) ) {T(ph.d.)} | 
+ ( (magistr) | (magistr_umění) | (magistra) | (magistra_umění) | (mga.) ) {T(mga.)} | 
+ ( (art.) | (umění) ) {T(art.)} | 
+ ( (doktor) | (doktorka) ) {T(doktor)} | 
+ ( (akad.mal.) | (akademická_malířka) | (akademický_malíř) ) {T(akad.mal.)} | 
+ ( (ing) | (ing.) | (inženýr) | (inženýrka) | (novýinženýrtest) ) {T(ing.)} | 
+ ( (ll.m.) ) {T(ll.m.)} | 
+ ( (dr.) ) {T(dr.)} | 
+ ( (thdr.) ) {T(thdr.)} | 
+ ( (bakalář) | (bakalářka) | (bc.) ) {T(bc.)} | 
+ ( (magistr) | (msc.) ) {T(msc.)} | 
+ ( (prof.) | (profesor) | (profesorka) ) {T(prof.)} | 
+ ( (doktor_obojího_práva) | (doktor_práv) | (judr.) | (právnička) | (právník) ) {T(judr.)} | 
+ ( (pol.) ) {T(pol.)} | 
+ ( (thlic.) ) {T(thlic.)} | 
+ ( (dipl.) ) {T(dipl.)} | 
+ ( (magistr) | (magistra) | (mgr.) ) {T(mgr.)} | 
+ ( (doktor_věd) | (doktorka_věd) | (dsc.) ) {T(dsc.)} | 
+ ( (phil.) ) {T(phil.)} | 
+ ( (ing.arch.) | (inženýr_architektury) ) {T(ing.arch.)} | 
+ ( (doc.) | (docent) | (docentka) ) {T(doc.)} | 
+ ( (doktor_přírodních_věd) | (rndr.) ) {T(rndr.)} | 
+ ( (paeddr.) ) {T(paeddr.)} | 
+ ( (soch.) ) {T(soch.)} | 
+ ( (akad.) | (akademická) ) {T(akad.)} | 
+ ( (věd) ) {T(věd)} | 
+ ( (bca.) ) {T(bca.)} | 
+ ( (ll.a.) ) {T(ll.a.)} | 
+ ( (csc.) | (cé_es_cé) | (kandidát_věd) | (kandidátka_věd) ) {T(csc.)} | 
+ ( (doktor_filozofie) | (phdr.) ) {T(phdr.)} | 
+ ( (theol.) ) {T(theol.)} | 
+ ( (th.d.) | (tý_ejčdý) ) {T(th.d.)} | 
+ ( (doktorka) | (phd.) ) {T(phd.)} | 
+ ( (doktor_medicíny) | (lékař) | (lékařka) | (mudr.) ) {T(mudr.)} | 
+ ( (dr.h.c.) | (čestná_doktorka) | (čestný_doktor) | (čestný_doktorka) ) {T(dr.h.c.)} | 
+ ( (m.litt.) ) {T(m.litt.)} | 
+ ( (kandidát) ) {T(kandidát)} | 
+ ( (em_bé_á) | (m.b.a.) ) {T(m.b.a.)} | 
+ ( (ba) ) {T(ba)} | 
+ ( (doc.ing.mgr.) ) {T(doc.ing.mgr.)} | 
+ ( (iwe) ) {T(iwe)} | 
+ ( (filologických) ) {T(filologických)} | 
+ ( (diplomovaný_specialista) | (dis.) ) {T(dis.)} | 
+ ( (artd.) | (doktor_umění) ) {T(artd.)} | 
+ ( (ma) ) {T(ma)} | 
+ ( (mph) ) {T(mph)} | 
+ ( (magistr) | (msc) ) {T(msc)} | 
+ ( (m.a.) ) {T(m.a.)} | 
+ ( (em_bé_á) | (mba) ) {T(mba)} | 
+ ( (doktor_věd) | (doktorka_věd) | (drsc.) ) {T(drsc.)}
+);

@@ -1,0 +1,8 @@
+#ABNF 1.0 UTF-8 cs;
+
+root $cas_rel;
+
+public $cas_rel = (
+    (později | déle | za) {+} |
+    (dříve | dřív | před) {-}
+);

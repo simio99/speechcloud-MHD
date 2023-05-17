@@ -1,0 +1,12 @@
+#ABNF 1.0 UTF-8 cs;
+
+root $cas_rel;
+
+public $cas_rel = (
+    (čtvrt) {0:15} |
+    (půl) {0:30} |
+    (tři čtvrtě) {0:45} |
+    (hodinu) {1:00} | 
+    (chvíli | okamžik) {0:15}
+
+);

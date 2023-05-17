@@ -1,0 +1,25 @@
+#ABNF 1.0 UTF-8 cs;
+
+root $akce;
+
+// info
+
+public $akce = (
+    (přepojit | přepojte | spojit | volat | zavolat | mluvit_s | mluvit) {transfer} |
+    (informace | podrobosti | email | místnost | kde sedí) {info} |
+    (to je vše | to_je všechno | už nic nechci | konec | už nic nepotřebuji | naschle | naschledanou ) {end} |
+    (vymazat stav | nové zadání | nový stav | já teď chci | nová osoba | já jsem chtěl | já jsem chtěla ) {cleanup} |
+
+    (někoho živého | živý člověk | operátora | nechci robota ) {operator} |
+    
+    (ano | souhlasím) {yes} |
+    (ne | nechci | nechtěl | neříkám | neříkal | nesouhlasím) {no} |
+    
+    (počasí | jak bude ) {weather} |
+	( jídleníček | ((jídelníček|jídlo) [v] (menza|menze) (bory|[na]borech) ) ) {menza} |
+
+    ( debil | píča | kretén | čůrák | hovado | krypl | idiot) {shit} |
+    
+    (nevím | nápověda | chci (pomoct|pomoci) | do prdele | co mám povídat | já nevím ) {help}
+);
+

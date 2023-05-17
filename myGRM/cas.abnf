@@ -1,0 +1,13 @@
+#ABNF 1.0 UTF-8 cs;
+
+root $cas;
+
+public $cas = (
+    (ráno | sedm | sedmé) {7:00} |
+    (dopoledne | deset | desáté) {10:00} |
+    (poledne | dvanáct | dvanácté | oběd | oběda) {12:00} |
+    (odpoledne | patnáct | patnácté) {15:00} |
+    (vpodvečer | podvečer | sedmnáct | sedmnácté) {17:00} |
+    (večer | dvacet | dvacáté) {20:00} |
+    (teď | nyní | právě | nejbližší) {now}
+);

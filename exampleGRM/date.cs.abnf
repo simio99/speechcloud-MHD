@@ -1,0 +1,105 @@
+#ABNF 1.0 utf-8;
+
+root $date;
+
+$date = ( $den ($mesic|$mesic_cislovka) $rok | ($mesic|$mesic_cislovka) $rok  | $rok | $mesic $den $rok |
+        ( [DATUM] MĚSÍC ($mesic|$mesic_cislovka) DEN $den ROK $rok) | ( $mesic $den $rok) 
+        );
+
+
+$den = (
+(PRVNÍ | PRVNÍHO) {D01} |
+(DRUHÝ | DRUHÝHO) {D02} |
+(TŘETÍ | TŘETÍHO) {D03} |
+(ČTVRTÝ | ČTVRTÉHO) {D04} |
+(PÁTÝ | PÁTÉHO) {D05} |
+(ŠESTÝ | ŠESTÉHO) {D06} |
+(SEDMÝ | SEDMÉHO) {D07} |
+(OSMÝ | OSMÉHO) {D08} |
+(DEVÁTÉHO | DEVÁTÝ) {D09} |
+(DESÁTÉHO | DESÁTÝ) {D10} |
+(JEDENÁCTÉHO | JEDENÁCTÝ) {D11} |
+(DVANÁCTÉHO | DVANÁCTÝ) {D12} |
+(TŘINÁCTÉHO | TŘINÁCTÝ) {D13} |
+(ČTRNÁCTÉHO | ČTRNÁCTÝ) {D14} |
+(PATNÁCTÉHO | PATNÁCTÝ) {D15} |
+(ŠESTNÁCTÉHO | ŠESTNÁCTÝ) {D16} |
+(SEDMNÁCTÉHO | SEDMNÁCTÝ) {D17} |
+(OSMNÁCTÉHO | OSMNÁCTÝ) {D18} |
+(DEVATENÁCTÉHO | DEVATENÁCTÝ) {D19} |
+( DVACÁTÉHO | DVACÁTÝHO | DVACÁTÝ) {D20} |
+(JEDNA (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ) |  JEDNADVACÁTÉHO |     DVACÁTÉHO PRVNÍHO | DVACÁTÝ PRVNÍ) {D21} |
+(DVA [A] (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ) | DVAADVACÁTÉHO |    DVACÁTÉHO DRUHÝHO | DVACÁTÝ DRUHÝ) {D22} |
+(TŘI [A] (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ)  | TŘIADVACÁTÉHO |   DVACÁTÉHO TŘETÍHO | DVACÁTÝ TŘETÍ) {D23} |
+(ČTYŘI [A] (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ)  | ČTYŘIADVACÁTÉHO | DVACÁTÉHO ČTVRTÉHO | DVACÁTÝ ČTVRTÝ) {D24} |
+(PĚT [A] (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ) | PĚTADVACÁTÉHO |    DVACÁTÉHO PÁTÉHO | DVACÁTÝ PÁTÝ) {D25} |
+(ŠEST [A] (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ) | ŠESTADVACÁTÉHO |   DVACÁTÉHO ŠESTÉHO | DVACÁTÝ ŠESTÝ) {D26} |
+(SEDM [A] (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ) | SEDMADVACÁTÉHO |   DVACÁTÉHO SEDMÉHO | DVACÁTÝ SEDMÝ) {D27} |
+(OSM [A] (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ)  | OSMADVACÁTÉHO |   DVACÁTÉHO OSMÉHO | DVACÁTÝ OSMÝ) {D28} |
+(DEVĚT [A] (DVACÁTÉHO|DVACÁTÝHO|DVACÁTÝ)  | DEVĚTADVACÁTÉHO | DVACÁTÉHO DEVÁTÉHO | DVACÁTÝ DEVÁTÉHO) {D29} |
+(TŘICÁTÝHO | TŘICÁTÉHO  | TŘICÁTÝ) {D30} |
+(JEDNA (TŘICÁTÉHO|TŘICÁTÝHO|TŘICÁTÝ) | JEDNATŘICÁTÉHO |      TŘICÁTÉHO PRVNÍHO | TŘICÁTÝ PRVNÍ) {D31}
+);
+
+$mesic_cislovka = ( 
+(PRVNÍ ) {M01} |
+(DRUHÝ ) {M02} |
+(TŘETÍ) {M03} |
+(ČTVRTÝ) {M04} |
+(PÁTÝ) {M05} |
+(ŠESTÝ) {M06} |
+(SEDMÝ) {M07} |
+(OSMÝ) {M08} |
+(DEVÁTÝ) {M09} |
+(DESÁTÝ) {M10} |
+(JEDENÁCTÝ) {M11} |
+(DVANÁCTÝ) {M12}
+);
+
+$mesic = ( 
+(LEDEN | LEDNA | LEDNU) {M01} |
+(ÚNOR | ÚNORA | ÚNORU) {M02} |
+(BŘEZEN | BŘEZNA | BŘEZNU) {M03} |
+(DUBEN | DUBNA | DUBNU) {M04} |
+(KVĚTEN | KVĚTNA | KVĚTNU) {M05} |
+(ČERVEN | ČERVNA | ČERVNU) {M06} |
+(ČERVENEC | ČERVENCE | ČERVENCI) {M07} |
+(SRPEN | SRPNA | SRPNU) {M08} |
+(ZÁŘÍ ) {M09} |
+(ŘÍJEN | ŘÍJNA | ŘÍJNU) {M10} |
+(LISTOPAD | LISTOPADU ) {M11} |
+(PROSINEC | PROSINCE | PROSINCI) {M12}
+);
+
+$jednotky1_9 = ( JEDNA {---1} | DVA {---2} | TŘI {---3} | ČTYŘI {---4} | PĚT {---5} | ŠEST {---6} | SEDM {---7} | OSM {---8} | DEVĚT {---9} );
+
+$rok = ( [ROK]
+( (OSMNÁCT SET  {18--}{--00}) |  (DEVATENÁCT SET  {19--}{--00}) | (DVA TISÍCE {20--}{--00}) )
+|
+(
+  ( (OSMNÁCT SET  {18--}) | (DEVATENÁCT SET  {19--}) | (DVA TISÍCE {20--}) |  [JEDEN] TISÍC OSM SET {18--} | [JEDEN] TISÍC DEVĚT SET {19--} | (ROKU|ROCE) {19--}  )
+  (
+    JEDNA {--01} | DVA {--02} | TŘI {--03} | ČTYŘI {--04} | PĚT {--05} | ŠEST {--06} | SEDM {--07} | OSM {--08} | DEVĚT {--09} | DESET {--10} |
+    JEDENÁCT {--11} | DVANÁCT {--12} | TŘINÁCT {--13} | ČTRNÁCT {--14} | PATNÁCT {--15} | ŠESTNÁCT {--16} | SEDMNÁCT {--17} | OSMNÁCT {--18} | DEVATENÁCT {--19} | 
+    (DVACET) {--20} | ( DVACET {--2-} $jednotky1_9 ) |
+    (TŘICET) {--30} | ( TŘICET {--3-} $jednotky1_9 ) |
+    (ČTYŘICET) {--40} | ( ČTYŘICET {--4-} $jednotky1_9 ) |
+    (PADESÁT) {--50} | ( PADESÁT {--5-} $jednotky1_9 ) |
+    (ŠEDESÁT) {--60} | ( ŠEDESÁT {--6-} $jednotky1_9 ) |
+    (SEDMDESÁT) {--70} | ( SEDMDESÁT {--7-} $jednotky1_9 ) |
+    (OSMDESÁT) {--80} | ( OSMDESÁT {--8-} $jednotky1_9 ) |
+    (DEVADESÁT) {--90} | ( DEVADESÁT {--9-} $jednotky1_9 )
+  )
+)
+|
+( // DVA A ČTYŘICET
+  ( $jednotky1_9 A 
+      (DVACET {--2-} | TŘICET {--3-} | ČTYŘICET {--4-} | PADESÁT {--5-} | ŠEDESÁT {--6-} | SEDMDESÁT {--7-} | OSMDESÁT {--8-} | DEVADESÁT {--9-} |
+       DVACÁTÝ {--2-} | TŘICÁTÝ {--3-} | ČTYŘICÁTÝ {--4-} | PADESÁTÁ {--5-} | ŠEDESÁTÝ {--6-} | SEDMDESÁTÝ {--7-} | OSMDESÁTÝ {--8-} | DEVADESÁTÝ {--9-} |
+       DVACÁTÉM {--2-} | TŘICÁTÉM {--3-} | ČTYŘICÁTÉM {--4-} | PADESÁTÉM {--5-} | ŠEDESÁTÉM {--6-} | SEDMDESÁTÉM {--7-} | OSMDESÁTÉM {--8-} | DEVADESÁTÉM {--9-}
+       ) {19--} ) [ROCE]
+)
+[ROK]
+);
+
+
